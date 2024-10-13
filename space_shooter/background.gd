@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 const SCREEN_WIDTH = 320
 

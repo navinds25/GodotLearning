@@ -1,6 +1,6 @@
 [gd_scene format=2]
 
-[node name="explosion" type="Sprite"]
+[node name="explosion" type="Sprite2D"]
 
 [node name="queue_free_timer" type="Timer" parent="."]
 wait_time = 0.1
