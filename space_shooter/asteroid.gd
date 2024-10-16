@@ -20,5 +20,5 @@ func _on_asteroid_area_entered(area):
 			queue_free()
 			
 			var stage_node = get_parent()
-			var explosion_instance = explosion_scene.instance()
+			var explosion_instance = explosion_scene.instantiate()
 			stage_node.add_child(explosion_instance)

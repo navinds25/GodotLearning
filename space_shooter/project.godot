@@ -6,27 +6,22 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
+config_version=5
 
 [application]
 
 config/name="space_shooter"
 run/main_scene="res://stage.tscn"
+config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=320
-window/size/height=180
-window/size/test_width=1280
-window/size/test_height=720
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [importer_defaults]
 
@@ -53,4 +48,6 @@ texture={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_environment="res://default_env.tres"

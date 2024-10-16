@@ -43,7 +43,7 @@ func _process(delta):
 	# for firing a shot
 	if Input.is_key_pressed(KEY_SPACE) and can_shoot:
 		var stage_node = get_parent()
-		var shot_instance = shot_scene.instance()
+		var shot_instance = shot_scene.instantiate()
 		shot_instance.position = position
 		stage_node.add_child(shot_instance)
 		can_shoot = false
@@ -57,5 +57,5 @@ func _on_player_area_entered(area):
 		emit_signal("destroyed")
 		queue_free()
 		var stage_node = get_parent()
-		var explosion_instance = explosion_scene.instance()
+		var explosion_instance = explosion_scene.instantiate()
 		stage_node.add_child(explosion_instance)
