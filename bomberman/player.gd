@@ -16,11 +16,18 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.flip_v = velocity.y > 0
 
-
 func _input(event: InputEvent) -> void:
+	var move = Vector2()
 	if event.is_action_pressed("space"):
 		print("action pressed")
 		
 	if event.is_action_released("space"):
 		print("action released")
-		
+	if event.is_action_pressed("ui_left"):
+		velocity.x = velocity.x -1
+		move.x -= 1
+		move_and_slide()
+	if event.is_action_pressed("ui_right"):
+		velocity.x = velocity.x +1
+		move.x += 1
+		move_and_slide()

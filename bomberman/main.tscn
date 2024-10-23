@@ -48,3 +48,5 @@ sprite_frames = SubResource("SpriteFrames_uix86")
 animation = &"walk"
 frame = 1
 frame_progress = 0.0374385
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
